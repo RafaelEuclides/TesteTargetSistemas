@@ -1,0 +1,28 @@
+def count_and_check_letter_a(text):
+    # Contar a quantidade de 'a' e 'A'
+    count_lower_a = text.count('a')
+    count_upper_a = text.count('A')
+    
+    total_count = count_lower_a + count_upper_a
+
+    # Verificar se a letra 'a' (ou 'A') está presente
+    exists = total_count > 0
+    
+    return exists, total_count
+
+def main():
+    # String pode ser definida aqui ou você pode descomentar a entrada do usuário
+    text = "Exemplo de string com várias letras a e A. Vamos contar quantas vezes 'a' aparece."
+
+    # Para usar a entrada do usuário, descomente a linha abaixo e comente a linha acima
+    # text = input("Digite uma string para verificar a ocorrência da letra 'a': ")
+
+    exists, count = count_and_check_letter_a(text)
+    
+    if exists:
+        print(f"A letra 'a' (maiúscula ou minúscula) aparece {count} vez(es) na string.")
+    else:
+        print("A letra 'a' (maiúscula ou minúscula) não aparece na string.")
+
+if __name__ == "__main__":
+    main()
